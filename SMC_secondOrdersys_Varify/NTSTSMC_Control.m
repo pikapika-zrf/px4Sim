@@ -17,7 +17,7 @@ for t = linspace(0,t_end,n)
 
     u = -0.1*sin(20*t) - (alpha/(beta*mu) * y(2)^(2-mu)) ...
     -(gamma*r/(beta*mu) *(y(2)^(2-mu))*(y(1)^(r-1))) ...
-    -(K1*(abs(s))^(1/2)*sign(s))- s_integ;
+    -(K1*(abs(s))^(1/2)*sign(s))- s_integ
 
     y(2) = y(2) + (0.1*sin(20*t) + u) * t_delta;
     y(1) = y(1) + y(2) * t_delta;
