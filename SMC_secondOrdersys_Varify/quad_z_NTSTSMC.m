@@ -6,7 +6,7 @@ Kz = 0;
 
 alpha = 2;beta = 1;gamma = 0.4;
 mu = 15/17;r = 5/3;
-K1 = 1;K2 = 1;
+K1 = 1.2;K2 = 0.5;
 
 ez=1; ez_dot = 0; z_des_dotdot = 0;
 s_z_integ = 0;
