@@ -7,9 +7,10 @@ K1 = 1;K2 = 1;
 
 y = [1 -5];
 s_integ = 0;
-y1_array = [];
-y2_array = [];
+
+y1_array = [];y2_array = [];
 s_array = [];u_array=[];s_dot_array=[];
+
 for t = linspace(0,t_end,n)
     s = alpha * y(1) +  (beta * y(2) ^ mu) + (gamma *  y(1) ^ r);
     if (t > 0) s_dot = (s - s_array(1,end)) / t_delta; end
