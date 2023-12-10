@@ -1,4 +1,4 @@
-function [phi_Predicted]  = uavMeasurementFcn1(state_Predicted,w)
+function [phi_Predicted]  = uavMeasurementFcn1(state_Predicted)
 
 phi_Predicted = state_Predicted(1);
 % theta_Predicted = state_Predicted(4);
