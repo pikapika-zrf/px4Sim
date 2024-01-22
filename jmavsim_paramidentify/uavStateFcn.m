@@ -1,7 +1,7 @@
 function x = uavStateFcn(x,u2,u3,u4)
 
 % Euler integration of continuous-time dynamics x'=f(x) with sample time dt
-dt = 0.004; % [s] Sample time
+dt = 1/250; % [s] Sample time
 x = x + vdpStateFcnContinuous(x,u2,u3,u4)*dt;
 end
 
