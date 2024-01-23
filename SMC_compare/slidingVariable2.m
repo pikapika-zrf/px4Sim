@@ -36,17 +36,19 @@ t = linspace(0,5,500);
 % error9 = sum(sqrt(x.^2));
 % plot(t,x,'-.k')
 
-mu=0.9;alpha = 2;beta = 1;gamma = 1;
-sol = ode45(@(t,x) (1/beta*(-alpha*x-gamma*x^1.1)).^(1/mu), tspan, x0);
+alpha = 2;beta = 1;gamma = 0.4;
+mu=15/17;r=1.1;
+sol = ode45(@(t,x) (1/beta*(-alpha*x-gamma*x^r)).^(1/mu), tspan, x0);
 x = deval(sol,t);
 error9 = sum(sqrt(x.^2));
 plot(t,x,'-k')
 
-mu=0.9;alpha = 0.2;beta = 0.1;gamma = 0.1;
-sol = ode45(@(t,x) (1/beta*(-alpha*x-gamma*x^1.1)).^(1/mu), tspan, x0);
+alpha = 2;beta = 0.5;gamma = 0.4;
+mu=21/17;r=5;
+sol = ode45(@(t,x) (1/beta*(-alpha*x-gamma*x^r)).^(1/mu), tspan, x0);
 x = deval(sol,t);
 error9 = sum(sqrt(x.^2));
-plot(t,x,'-r')
+plot(t,x,'--r')
 % %pid
 % sol10 = ode45(@pidS,[0 20],[5; 0]);
 % x10 = deval(sol10,t);
